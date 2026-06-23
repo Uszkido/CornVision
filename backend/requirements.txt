@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+python-multipart
+pydantic
+sqlalchemy
+psycopg2-binary
+opencv-python-headless
+numpy
+ultralytics
+python-dotenv
+websockets
+python-jose[cryptography]
+passlib[bcrypt]
+pandas
+pyinstaller
