@@ -24,8 +24,13 @@ def get_resource_path(relative_path):
         base_path = os.path.dirname(os.path.abspath(__file__))
     return os.path.join(base_path, relative_path)
 
+# Fix path for standalone importing
+parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if parent_dir not in sys.path:
+    sys.path.append(parent_dir)
+
 from . import models, database, auth
-from ..ai_models.inference import CornVisionAI
+from ai_models.inference import CornVisionAI
 
 # Initialize AI Engine
 ai_engine = CornVisionAI()
